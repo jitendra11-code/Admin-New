@@ -1,0 +1,67 @@
+.heading {
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+
+.input-form {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.required:after {
+  content:" *";
+  color: red;
+}
+.non_required:after {
+  content:" *";
+  color: transparent;
+  visibility: none;
+}
+
+.phase-outer .input-form {
+  margin-top: 0px;
+
+}
+.phaseLable {
+  font-weight: normal;
+  margin-bottom: 3px;
+  font-size: 13px !important;
+}
+
+.phase-outer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-85 {
+  width: 100%;
+}
+.phase-outer .MuiGrid-item {
+  padding-top: 10px;
+}
+.padd-5 .MuiGrid-item {
+  padding-top: 7px;
+}
+.approval-table {
+  width:100%;
+  padding-left: 13px;
+}
+.approval-table th{
+  padding: 0px 10px;
+  background-color: #f4f7fe;
+}
+.approval-table td{
+  padding: 4px 10px;
+}
+.pl-0{
+ padding-left: 0!important;
+}
+.dense-table th{
+  padding: 0px 10px;
+}
+/* 
+.inside-scroll {
+  overflow-y: auto;
+  height: calc(100vh - 190px);
+} */
+

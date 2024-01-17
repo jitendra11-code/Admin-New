@@ -1,0 +1,30 @@
+.MuiToggleButtonGroup-root{
+    border-radius: 7px;
+    height: 34px !important;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.toggle-div .MuiButtonBase-root{
+    border-radius: 7px;
+    height: 34px !important;
+    width: 100% !important;
+    text-transform: capitalize;
+}
+
+.MuiToggleButtonGroup-root .MuiToggleButtonGroup-grouped:not(:last-of-type) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.MuiToggleButtonGroup-root .MuiToggleButtonGroup-grouped:not(:first-of-type) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.MuiToggleButtonGroup-root{
+    width: 100% !important;
+    margin-top: 3px;
+}
+
+
+

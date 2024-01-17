@@ -1,0 +1,32 @@
+.section{
+    border-bottom: 1px solid #ebebeb;
+    padding: 5px 10px;
+}
+.section-heading{
+    font-weight: normal;   
+    font-weight: 600;
+    font-size: 13px !important;
+    margin-bottom: 15px;
+}
+
+.section-headingTop
+{
+    font-weight: normal;   
+    font-weight: 600;
+    font-size: 13px !important;   
+    margin-top: 10px;
+}
+.property-label{
+    font-weight: 500;
+    margin-right: 6px;
+    font-size: 12px;
+}
+
+.property-value{
+    font-weight: 400;
+    margin-right: 6px;
+    font-size: 12px;
+}
+.section .MuiGrid-item {
+    padding-top: 5px;
+}

@@ -1,0 +1,40 @@
+
+  .merged-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .merged-table th,
+  .merged-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .merged-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .merged-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .merged-table tr:hover {
+    background-color: #ebebeb;
+  }
+  
+  .merged-table th,
+  .merged-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .avataricon {
+    width:20px;
+    height:22px;
+    background-color:whitesmoke;
+    color:#00316A;
+  }

@@ -1,0 +1,1811 @@
+:root {
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --bold: 600;
+    --extra-bold: 700;
+    font-family: 'Poppins', serif;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0px;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #cbcbcb;
+}
+
+body {
+    line-height: 1.35 !important;
+    /* font-family: 'Poppins', serif; */
+    font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+em {
+    font-style: normal !important;
+}
+
+.css-1sh86kx {
+    display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* check box css */
+.css-ksccpl-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+    color: #00316a;
+}
+
+.css-q72kp7-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+    background-color: #6495ed !important;
+}
+
+.css-1axk55m.Mui-selected {
+    background-color: #6495ed !important;
+}
+
+/* check box css */
+/* .css-e7x83t-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+  color: red !important;
+} */
+.css-kb05k5 {
+    border-right: none;
+}
+
+.MuiAutocomplete-popper {
+    z-index: 1000000;
+}
+
+/* search box css */
+.css-cuajes .searchRoot .MuiInputBase-input {
+    padding-left: 30px;
+    padding-right: calc(1em + 28px);
+    border: 1px solid #b8c2cd;
+}
+
+/* language switcher */
+/* .lang-switcher-btn{
+  display: none;
+} */
+
+/* side bar color css */
+.css-133y9c2-MuiButtonBase-root-MuiListItem-root .nav-item-text {
+    color: rgba(255, 255, 255, 1);
+}
+
+.css-133y9c2-MuiButtonBase-root-MuiListItem-root .nav-item-icon {
+    color: rgba(255, 255, 255, 1);
+}
+
+.inside-scroll {
+    overflow-y: auto;
+    height: calc(100vh - 240px);
+}
+
+.inside-scroll-comparision {
+    overflow-y: auto;
+    height: calc(100vh - 298px);
+}
+
+.inside-scroll-198 {
+    overflow-y: auto;
+    height: calc(91vh - 198px);
+}
+
+.inside-scroll-168-pos {
+    overflow-y: auto;
+    height: calc(91vh - 168px);
+}
+
+.inside-scroll-198-boq {
+    overflow-y: auto;
+}
+
+.inside-scroll-159-meet {
+    overflow-y: auto;
+    height: calc(91vh - 159px);
+}
+
+.inside-scroll-198-project-plan {
+    overflow-y: auto;
+    height: calc(91vh - 176px);
+}
+
+.inside-scroll-198-staf {
+    overflow-y: auto;
+    height: calc(91vh - 265px);
+}
+
+.inside-scroll-108 {
+    overflow-y: auto;
+    height: calc(100vh - 108px);
+}
+
+.inside-scroll-280 {
+    overflow-y: auto;
+    height: calc(100vh - 280px);
+}
+
+.inside-scroll-view {
+    overflow-y: auto;
+    height: calc(100vh - 240px);
+}
+
+.input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.inside-scroll-approval-note {
+    overflow-y: auto;
+    height: calc(100vh - 240px);
+}
+
+.inside-scroll-213 {
+    overflow-y: auto;
+    height: calc(100vh - 213px);
+}
+
+.inside-scroll-208 {
+    overflow-y: auto;
+    height: calc(100vh - 208px);
+}
+
+.inside-scroll-232 {
+    overflow-y: auto;
+    height: calc(100vh - 332px);
+}
+
+.inside-scroll-269 {
+    overflow-y: auto;
+    height: calc(100vh - 269px);
+}
+
+.inside-scroll-280 {
+    overflow-y: auto;
+    height: calc(100vh - 280px);
+}
+
+.inside-scroll-261 {
+    overflow-y: auto;
+    height: calc(100vh - 261px);
+}
+
+.inside-scroll-313 {
+    overflow-y: auto;
+    height: calc(100vh - 313px);
+}
+
+.inside-scroll-268 {
+    overflow-y: auto;
+    height: calc(100vh - 268px);
+}
+
+.inside-scroll-260 {
+    overflow-y: auto;
+    height: calc(100vh - 260px);
+}
+
+.inside-scroll-230 {
+    overflow-y: auto;
+    height: calc(100vh - 230px);
+}
+
+.inside-scroll-227-stability-report {
+    overflow-y: auto;
+    height: calc(100vh - 227px);
+}
+
+.inside-scroll-267-lease-deed {
+    overflow-y: auto;
+    height: calc(100vh - 325px);
+}
+
+.inside-scroll-250 {
+    overflow-y: auto;
+    height: calc(100vh - 250px);
+}
+
+.inside-scroll-233 {
+    overflow-y: auto;
+    height: calc(100vh - 233px);
+}
+
+.inside-scroll-251 {
+    overflow-y: auto;
+    height: calc(100vh - 251px);
+}
+
+.inside-scroll-405 {
+    overflow-y: auto;
+    height: calc(100vh - 405px);
+}
+
+.inside-scroll-405-network-feasibility {
+    overflow-y: auto;
+    height: calc(100vh - 387px);
+}
+
+.inside-scroll-nt {
+    overflow-y: auto;
+    height: calc(100vh - 420px);
+}
+
+.inside-scroll-270 {
+    overflow-y: auto;
+    height: calc(100vh - 270px);
+}
+
+.inside-scroll-310 {
+    overflow-y: auto;
+    height: calc(100vh - 310px);
+}
+
+.inside-scroll-210 {
+    overflow-y: auto;
+    height: calc(100vh - 210px);
+}
+
+.inside-scroll-255 {
+    overflow-y: auto;
+    height: calc(100vh - 255px);
+}
+
+.inside-scroll-298 {
+    overflow-y: auto;
+    height: calc(100vh - 298px);
+}
+
+.inside-scroll-287 {
+    overflow-y: auto;
+    height: calc(100vh - 345px);
+}
+
+.inside-scroll-185 {
+    overflow-y: auto;
+    height: calc(100vh - 185px);
+}
+
+.inside-scroll-194 {
+    overflow-y: auto;
+    height: calc(100vh - 194px);
+}
+
+.inside-scroll-233-veri {
+    overflow-y: auto;
+    height: calc(100vh - 233px);
+}
+
+.inside-scroll-358-branch-hand {
+    overflow-y: auto;
+    height: calc(100vh - 358px);
+}
+
+.inside-scroll-165-boq-veri {
+    overflow-y: auto;
+    height: calc(100vh - 165px);
+}
+
+.inside-scroll-194-invoicing {
+    overflow-y: auto;
+    height: calc(100vh - 217px);
+}
+
+.inside-scroll-105-bulkupdate-branchcode {
+    overflow-y: auto;
+    height: calc(100vh - 133px);
+}
+
+.inside-scroll-215-branch-handover {
+    overflow-y: auto;
+    height: calc(100vh - 215px);
+}
+
+.inside-scroll-250 {
+    overflow-y: auto;
+    height: calc(100vh - 250px);
+}
+
+.inside-scroll-231 {
+    overflow-y: auto;
+    height: calc(100vh - 231px);
+}
+
+.inside-scroll-229-boq-list {
+    overflow-y: auto;
+    height: calc(100vh - 229px);
+}
+
+.inside-scroll-230-boq-list {
+    overflow-y: auto;
+    height: calc(100vh - 230px);
+}
+
+.inside-scroll-215-branch-handover {
+    overflow-y: auto;
+    height: calc(100vh - 215px);
+}
+
+.inside-scroll-225 {
+    overflow-y: auto;
+    height: calc(100vh - 225px);
+}
+
+.inside-scroll-create-225 {
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    height: calc(100vh - 225px);
+}
+
+.inside-scroll-create-280 {
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    height: calc(100vh - 280px);
+}
+
+.inside-scroll-137 {
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    height: calc(100vh - 137px);
+}
+
+.inside-scroll-87 {
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    height: calc(103vh - 87px);
+}
+
+.inside-scroll-133 {
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    height: calc(100vh - 133px);
+}
+
+.inside-scroll-142 {
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    height: calc(100vh - 142px);
+}
+
+.inside-scroll-160 {
+    overflow-x: hidden;
+    height: calc(100vh - 235px);
+}
+
+.inside-scroll-119 {
+    overflow-x: hidden;
+    height: calc(100vh - 121px);
+}
+
+.inside-scroll-234 {
+    overflow-y: auto;
+    height: calc(100vh - 225px);
+}
+
+.inside-scroll-227 {
+    overflow-y: auto;
+    height: calc(100vh - 227px);
+}
+
+.inside-scroll-226 {
+    overflow-y: auto;
+    height: calc(100vh - 226px);
+}
+
+.inside-scroll-244 {
+    overflow-y: auto;
+    height: calc(100vh - 244px);
+}
+
+.inside-scroll-247 {
+    overflow-y: auto;
+    height: calc(100vh - 247px);
+}
+
+.inside-scroll-170 {
+    overflow-y: auto;
+    height: calc(100vh - 170px);
+}
+
+.inside-scroll-120 {
+    overflow-y: auto;
+    height: calc(100vh - 120px);
+}
+
+.inside-scroll-157 {
+    overflow-y: auto;
+    height: calc(100vh - 157px);
+}
+
+.inside-scroll-398 {
+    overflow-y: auto;
+    height: calc(100vh - 208px);
+}
+
+.inside-scroll-360 {
+    overflow-y: auto;
+    height: calc(100vh - 360px);
+}
+
+.inside-scroll-422 {
+    overflow-y: auto;
+    height: calc(100vh - 422px);
+}
+
+.inside-scroll-339-phase {
+    overflow-y: auto;
+    height: calc(100vh - 339px);
+}
+
+.inside-scroll-375 {
+    overflow-y: auto;
+    height: calc(100vh - 375px);
+}
+
+/* vender allcation css */
+.vendarIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.actions-icons-size {
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionsIcons-delete {
+    border-radius: 50%;
+    border: 1px solid #ff5151;
+    padding: 1px;
+    font-size: 13px;
+    margin-right: 8px;
+    color: #ff5151;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* tab css */
+.profile .css-17nhsws-MuiAccordionDetails-root {
+    padding: 20px 15px;
+}
+
+.profile .MuiAccordionDetails-root {
+    padding: 20px 15px;
+}
+
+.profileImageDetails .MuiAccordionDetails-root {
+    padding: 0px !important;
+}
+
+.profile .MuiFormControl-root-MuiTextField-root {
+    width: 100%;
+}
+
+.MuiTextField-root {
+    width: 100%;
+}
+
+.profile .MuiButtonBase-root-MuiAccordionSummary-root {
+    flex-direction: row !important;
+}
+
+.profile .MuiGrid-root {
+    margin-bottom: 0px !important;
+}
+
+.profile-comparison {
+    padding-bottom: 30px;
+}
+
+.profile {
+    padding-bottom: 30px;
+}
+
+/* .profile-comparison .css-id8ifk-MuiTableCell-root{
+  font-weight: 500;
+  font-size: 13.5px;
+  padding: 0;
+} */
+.profile-comparison .css-17nhsws-MuiAccordionDetails-root {
+    padding: 0px 15px;
+}
+
+.profile-comparison th.MuiTableCell-body {
+    font-weight: 500;
+    font-size: 13.5px;
+    padding: 7px;
+}
+
+.profile-comparison td.MuiTableCell-body {
+    font-size: 13.5px;
+    padding: 7px;
+}
+
+/* .profile-comparison  .css-8zqu3m-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+  border-top: 0;
+} */
+.profile-comparison .css-8zqu3m-MuiPaper-root-MuiAccordion-root:first-child {
+    border-top: 0;
+}
+
+.profile-comparison .bottom-button {
+    position: absolute;
+    bottom: 59px;
+    background-color: white;
+    left: 0;
+}
+
+.bottom-button-quote {
+    position: absolute;
+    bottom: 59px;
+    background-color: white;
+    left: 0;
+}
+
+.remark-field {
+    display: flex;
+    justify-content: center;
+    margin-right: 150px;
+}
+
+.remark-field-ssr {
+    display: flex;
+    justify-content: center;
+    margin-right: 150px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.actions-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.banner-plus {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.MuiAutocomplete-inputRoot {
+    flex-wrap: nowrap !important;
+}
+
+.mandateInfoLable {
+    font-weight: normal;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 13px !important;
+}
+
+.mandateInfoValue {
+    font-weight: normal;
+    margin-bottom: 3px;
+    margin-right: 8px !important;
+    font-size: 13px !important;
+}
+
+/* .remark-field input {
+  height: 15px;
+} */
+
+.remark-field .MuiFormControl-root {
+    width: 566px !important;
+}
+
+.rag-red {
+    border: 1px solid red !important;
+}
+
+.editTextClass {
+    width: 100%;
+    border: 1px solid #ccc !important;
+    border-radius: 4px;
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentColor;
+    padding: 4px 0 5px;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    min-width: 0;
+    width: 100%;
+    -webkit-animation-name: mui-auto-fill-cancel;
+    animation-name: mui-auto-fill-cancel;
+    -webkit-animation-duration: 10ms;
+    animation-duration: 10ms;
+    padding-top: 1px;
+    padding-right: 0;
+    padding-bottom: 1px;
+    height: 35px !important;
+    font-size: 12px;
+    padding-left: 8px;
+}
+
+.green-red {
+    border: 1px solid green !important;
+}
+
+.bottom-fix-btn {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 11px 0px;
+    margin-bottom: 0;
+    z-index: 1;
+    padding-left: 12%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    height: 55px;
+}
+
+.bottom-fix-btn-content {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 11px 0px;
+    margin-bottom: 0;
+    z-index: 1;
+    padding-left: 12%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    /* height: 55px; */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.textAreaVertical {
+    resize: vertical;
+    border-radius: 10px;
+    font-family: 'Poppins', serif !important;
+    font-size: 14px !important;
+}
+
+.bottom-fix-btn-certificates {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    right: 0;
+    left: 0;
+    text-align: center;
+    /* padding: 11px 0px; */
+    margin-bottom: 0;
+    z-index: 1;
+    padding-left: 12%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.bottom-fix-history {
+    position: absolute;
+    bottom: 60px;
+    background-color: white;
+    right: 0px;
+    left: 15px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+    z-index: 1;
+    /* padding-left: 12%; */
+    border: none;
+}
+
+.bottom-fix-history-boq {
+    position: absolute;
+    bottom: 57px;
+    background-color: white;
+    right: 0px;
+    left: 15px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 5px;
+    z-index: 1;
+    /* padding-left: 12%; */
+    border: none;
+}
+
+.bottom-fix-loihistory {
+    position: fixed;
+    bottom: 76px;
+    background-color: white;
+    right: 0px;
+    left: 222px;
+    text-align: center;
+    padding: 12px 15px 0;
+    margin-bottom: 0;
+    z-index: 1;
+    /* padding-left: 12%; */
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.bottom-fix-rtgshistory {
+    position: absolute;
+    bottom: 55px;
+    background-color: white;
+    right: 0px;
+    left: 15px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+    z-index: 1;
+    /* padding-left: 12%; */
+    border: none;
+}
+
+.icon-size {
+    width: 20px;
+    margin-right: 10px;
+    padding: 1px 0;
+}
+
+/* property view css */
+.property-view {
+    padding: 0px 10px 10px;
+}
+
+.property-view .MuiTextField-root {
+    width: 100%;
+}
+
+.property-view .css-1s076j1-MuiPaper-root-MuiCard-root {
+    border-radius: 8px !important;
+}
+
+.property-view .css-46bh2p-MuiCardContent-root {
+    padding: 10px 15px;
+}
+
+.property-view .MuiPaper-rounded {
+    box-shadow: 0px 0px 3px 3px rgb(0 0 0 / 4%) !important;
+    border-radius: 8px !important;
+}
+
+.wishlistIcon {
+    right: 10px;
+    top: 9px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 3px;
+    cursor: pointer;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+}
+
+.list-button {
+    padding: 7px 7px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.54);
+    height: 34px;
+    min-width: 80px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 6px;
+    border-radius: 6px;
+    color: rgb(0, 49, 106);
+    border-color: rgb(0, 49, 106);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-btn {
+    background-color: rgb(0, 49, 106);
+    color: #fff;
+    padding-left: 12px;
+}
+
+.Mui-selected {
+    color: #00316a !important;
+}
+
+.MuiTabs-indicator {
+    background-color: #00316a !important;
+}
+
+.MuiFormControl-root {
+    width: 100%;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #00316a !important;
+}
+
+.grid-card .MuiPaper-root {
+    margin-bottom: 15px;
+}
+
+.MuiAccordionSummary-expandIconWrapper {
+    position: absolute;
+    right: 12px;
+}
+
+.profile a {
+    color: #00316a;
+}
+
+.profile a:active {
+    color: #00316a;
+}
+
+/* .MuiDrawer-paperAnchorRight .MuiButtonBase-root {
+  background-color: #00316a !important;
+} */
+
+/* Upload new docs */
+.template-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    border: 1px solid #babfc7;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+
+.account-tabs {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+.account-tabs-content {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+/* Upload new docs */
+
+/* side-bar menu padding */
+.pd-left {
+    padding-left: 15px;
+}
+
+/* property comparation */
+.property-approve {
+    margin-left: 6px;
+    /* display: inline-block; */
+    width: 100%;
+    text-align: left;
+    color: rgb(64 64 64);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #5df58f3b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.property-reject {
+    margin-left: 6px;
+    /* display: inline-block; */
+    width: 100%;
+    text-align: left;
+    color: rgb(64 64 64);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgba(240, 79, 71, 0.145);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.property-normal {
+    margin-left: 6px;
+    /* display: inline-block; */
+    width: 100%;
+    text-align: left;
+    background-color: rgb(188 219 255);
+    color: rgb(64 64 64);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table-cell {
+    padding: 5px !important;
+    line-height: 1 !important;
+}
+
+.MuiAccordionSummary-root {
+    min-height: 25px;
+}
+
+.MuiAccordionSummary-content {
+    margin: 4px 0;
+}
+
+.message-right-bottom {
+    background-color: rgb(244 247 254);
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    border-radius: 6px;
+    font-size: 12px;
+    bottom: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    color: red;
+    font-weight: 400;
+}
+
+/* .approval-history-table {} */
+
+.approval-history-table th {
+    padding: 0 16px;
+}
+
+.approval-history-table .t-body th,
+.approval-history-table .t-body td {
+    line-height: 0.9 !important;
+}
+
+.pro-com-div {
+    margin: 0px;
+    border: 1px solid #c5c5c5;
+    padding: 3px 3px 3px 5px;
+    border-radius: 4px;
+    display: flex;
+}
+
+.count-item {
+    background-color: #00316a;
+    border-radius: 50%;
+    color: white;
+    padding: 6px 9px;
+    height: 24px;
+    width: 24px;
+}
+
+.title-tag {
+    margin-left: 6px;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(188 219 255);
+    color: rgb(64 64 64);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.Mui-disabled {
+    -webkit-text-fill-color: #383838 !important;
+}
+
+.ptb-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.page-title {
+    font-size: 14px;
+    color: rgb(17, 24, 39);
+    font-weight: 600;
+    margin-bottom: 0px !important;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.bottom-submit-btn {
+    margin-left: 10px;
+    padding: 2px 20px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    border-color: rgb(0, 49, 106);
+    background-color: rgb(0, 49, 106);
+}
+
+.bottom-submit-btn:hover {
+    border-color: rgb(0, 49, 106);
+    background-color: rgb(0, 49, 106);
+}
+
+/* model pop css */
+.dialog-wrap .MuiDialog-paper {
+    padding: 17px;
+}
+.dialog-wrap-remarks .MuiDialog-paper {
+    padding: 1px;
+    max-width: 1000px;
+}
+
+.title-model {
+    font-size: 16px;
+    color: rgb(17, 24, 39);
+    text-align: center;
+    padding: 8px 15px 15px;
+}
+
+.content-model {
+    color: rgb(17, 24, 39);
+}
+
+.yes-btn {
+    padding: 2px 10px;
+    border-radius: 6px;
+    color: #fff;
+    border-color: rgb(0, 49, 106);
+    background-color: rgb(0, 49, 106);
+    border: 1px solid;
+}
+
+.yes-btn:hover {
+    background-color: rgb(0, 49, 106);
+}
+
+.no-btn {
+    padding: 2px 10px;
+    border-radius: 6px;
+    color: rgb(0, 49, 106);
+    border-color: rgb(0, 49, 106);
+    border: 1px solid;
+    background-color: white;
+}
+
+.no-btn:hover {
+    background-color: white;
+}
+
+.dialog-wrap .MuiDialogContentText-root {
+    color: rgb(17, 24, 39);
+    font-size: 14px;
+}
+
+.button-wrap {
+    justify-content: center !important;
+}
+
+.button-wrapp {
+    justify-content: center !important;
+}
+
+/* bg css */
+.bg-pd {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* property view css */
+
+/* project plan css */
+.cell-padding {
+    padding: 0px 5px !important;
+}
+
+.cell-padding-section {
+    padding: 0px 10px !important;
+}
+
+.padd-right .MuiInputBase-root {
+    padding-right: 8px !important;
+}
+
+.it-asset-table .ag-row-odd {
+    background-color: #fff !important;
+}
+
+.grid-height {
+    height: calc(100vh - 316px);
+}
+
+.page-title-heading {
+    font-size: 15px;
+    color: rgb(17, 24, 39);
+    font-weight: 600;
+    margin-bottom: 0px !important;
+}
+
+@media (min-width: 900px) {
+    .css-1uv8bk3 {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .css-ki32pq-MuiInputBase-root .MuiInputBase-input {
+        width: 500px;
+    }
+
+    .css-ki32pq-MuiInputBase-root .MuiInputBase-input:focus {
+        width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-comparison .css-17nhsws-MuiAccordionDetails-root {
+        overflow-x: auto;
+    }
+
+    .mob {
+        overflow-x: auto;
+    }
+
+    .mob button {
+        margin: 5px;
+    }
+
+    .hide-mob {
+        display: none;
+    }
+}
+
+/* sidebar width */
+.mini-toggle-sidebar {
+    width: 220px;
+    height: 100vh;
+}
+
+/* inpur focus color change */
+.css-e7x83t-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: #00316a !important;
+}
+
+/* .css-1pqebhm-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline, .Mui-focused{
+  border-color: #00316A !important;
+}
+.Mui-focused{
+  border-color: #00316A !important;
+} */
+
+/* form-error */
+.form-error {
+    color: red;
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.css-hnys3a-MuiButtonBase-root-MuiButton-root {
+    background-color: #00316a !important;
+}
+
+.ReactModal__Overlay {
+    z-index: 9999999 !important;
+}
+
+input.Mui-disabled {
+    background: #f3f3f3;
+    border-radius: 8px;
+}
+
+.MuiTextField-root {
+    width: 100%;
+}
+
+.rounded {
+    border-radius: 25px;
+    background-color: white;
+    color: #00316a;
+    padding: 2px 9px;
+    font-size: 10px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 9999999999;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.closeIocns {
+    position: absolute;
+    top: 23%;
+    right: 5px;
+    font-size: 20px;
+    cursor: 'pointer';
+}
+
+.hide {
+    display: none;
+}
+
+.inside-scroll-155 {
+    overflow-y: auto;
+    height: calc(100vh - 155px);
+}
+
+.inside-scroll-180 {
+    overflow-y: auto;
+    height: calc(100vh - 180px);
+}
+
+.inside-scroll-201 {
+    overflow-y: auto;
+    height: calc(100vh - 201px);
+}
+
+.inside-scroll-217 {
+    overflow-y: auto;
+    height: calc(100vh - 217px);
+}
+
+.inside-scroll-228 {
+    overflow-y: auto;
+    height: calc(100vh - 230px);
+}
+
+.closeIocns {
+    cursor: pointer;
+}
+
+.page-title-heading {
+    font-size: 15px;
+    color: rgb(17, 24, 39);
+    font-weight: 600;
+    margin-bottom: 0px !important;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.mtb-10 {
+    margin-bottom: -15px !important;
+    margin-top: -5px !important;
+}
+
+.my-6 {
+    margin-top: -6px;
+    margin-bottom: 6px;
+}
+
+.MuiTabs-root {
+    min-height: 30px;
+}
+
+a.MuiTab-root {
+    min-height: 30px;
+    padding: 0px 16px;
+}
+
+button.MuiTab-root {
+    min-height: 30px;
+    padding: 0px 16px;
+}
+
+.mb-table .mandate-table,
+.networkwrapper .mandate-table,
+.vendor-wrapper .mandate-table,
+.project-plan .mandate-table,
+.po .mandate-table,
+.meeting-notes .mandate-table,
+.staff .mandate-table,
+.branch-Handover .mandate-table,
+.quality-audit .mandate-table,
+.invoicing .mandate-table,
+.phaseapprovalnote .mandate-table,
+.locationapprovalnote .mandate-table,
+.qualityaudit .mandate-table,
+.branchhandover .mandate-table,
+.upsstatus .mandate-table,
+.qualityauditderived .mandate-table,
+.qualityauditreport .mandate-table,
+.boqverification .mandate-table {
+    margin-bottom: 0px;
+}
+
+.mt-0 {
+    margin-top: 10px !important;
+}
+
+.add-landlord {
+    /* margin-top: 10px; */
+    margin-left: 0px !important;
+}
+
+.remark-field-space {
+    display: flex !important;
+    justify-content: center !important;
+    /* margin-right: 150px; */
+    margin-left: 101px !important;
+}
+
+.custom-font button {
+    font-size: 13px;
+}
+
+.mar-right-11 {
+    margin-right: 11px !important;
+}
+
+.fontSize-11 {
+    font-size: 11px !important;
+}
+
+.history-bottom .mandate-table {
+    margin-bottom: 0;
+}
+
+.add-prop-bold {
+    font-weight: 600;
+    color: rgb(17, 24, 39);
+    font-size: 12px !important;
+}
+
+.add-prop-bold10 {
+    font-weight: 600;
+    color: rgb(17, 24, 39);
+    font-size: 10px !important;
+}
+
+.add-prop-bold-500 {
+    font-weight: 500;
+    color: rgb(17, 24, 39);
+    font-size: 12px !important;
+}
+
+.padin0 {
+    padding-top: 0px !important;
+}
+
+.InputLabelProperty {
+    font-weight: 600;
+    color: rgb(17, 24, 39);
+    font-size: 14px !important;
+}
+
+.addProperty .MuiInputLabel-root {
+    font-weight: 600;
+    color: rgb(17, 24, 39);
+    font-size: 13px !important;
+}
+
+.lockinbfl .MuiTypography-body1 {
+    font-weight: 600;
+    color: rgb(17, 24, 39);
+    font-size: 11px !important;
+}
+
+.centerProj {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.centerProp {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#branchhand .MuiInputBase-root input {
+    padding-right: 23px !important;
+}
+
+.font_bold {
+    font-weight: bold !important;
+}
+
+@media screen and (min-width: 1370px) and (max-width: 1400px) {
+    .remark-field .MuiFormControl-root {
+        width: 400px !important;
+    }
+}
+
+@media screen and (min-width: 1295px) and (max-width: 1370px) {
+    .remark-field .MuiFormControl-root {
+        width: 350px !important;
+    }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1295px) {
+    .remark-field .MuiFormControl-root {
+        width: 310px !important;
+    }
+}
+
+@media screen and (min-width: 1195px) and (max-width: 1250px) {
+    .remark-field .MuiFormControl-root {
+        width: 270px !important;
+    }
+}
+
+@media screen and (min-width: 1095px) and (max-width: 1195px) {
+    .remark-field .MuiFormControl-root {
+        width: 214px !important;
+    }
+}
+
+@media screen and (min-width: 1026px) and (max-width: 1095px) {
+    .remark-field .MuiFormControl-root {
+        width: 205px !important;
+    }
+}
+
+@media screen and (min-width: 1003px) and (max-width: 1026px) {
+    .remark-field .MuiFormControl-root {
+        width: 182px !important;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1003px) {
+    .remark-field .MuiFormControl-root {
+        width: 169px !important;
+    }
+}
+
+@media screen and (min-width: 977px) and (max-width: 991px) {
+    .remark-field .MuiFormControl-root {
+        width: 155px !important;
+    }
+}
+
+@media screen and (min-width: 950px) and (max-width: 977px) {
+    .remark-field .MuiFormControl-root {
+        width: 115px !important;
+    }
+}
+
+.tooltipstyle {
+    height: 35px;
+    width: 35px;
+    border-radius: 19px;
+}
+
+.iconstyle {
+    height: 27px;
+    width: 27px;
+    align-items: center;
+}
+
+.css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
+    margin: 0px 0;
+}
+
+.css-t7axzy-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    min-height: 50px;
+}
+
+.ag-radio-button-input-wrapper {
+    font-family: var(--ag-icon-font-family) !important;
+}
+
+.ag-radio-button-input-wrapper input,
+.ag-radio-button-input-wrapper input {
+    width: 100%;
+    height: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-12 {
+    width: 12%;
+}
+
+.w-16 {
+    width: 16%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-71 {
+    width: 71%;
+}
+
+.w-35 {
+    width: 45%;
+}
+
+.width_30 {
+    width: 30%;
+}
+
+.field-bold {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+}
+
+.no-padding .MuiOutlinedInput-input {
+    padding: 7px;
+}
+
+.assetbackcolor {
+    background-color: #f4f7fe;
+}
+
+.section-headpad {
+    font-weight: normal;
+    font-weight: 600;
+    font-size: 13px !important;
+    /* margin-top: 10px; */
+    padding-left: 10px;
+}
+
+.section-headingTopAsset {
+    font-weight: normal;
+    font-weight: 600;
+    font-size: 13px !important;
+    /* margin-top: 10px; */
+    padding-left: 5px;
+}
+
+.padtop0 {
+    padding-top: 0px !important;
+}
+
+.cardBottom {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #dcd3d3;
+    padding: 4px 0px 0px;
+}
+
+.cardBottomno {
+    width: 100%;
+    display: flex;
+    padding: 4px 0px 0px;
+}
+
+.cardBottom1 {
+    width: 100%;
+    /* display: flex; */
+    border-bottom: 1px solid #dcd3d3;
+    padding: 4px 0px 0px;
+}
+
+.cardFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    /* border-radius: 50%; */
+}
+
+.actionsCard {
+    display: flex;
+    align-items: center;
+    /* justify-content: end; */
+    height: 100%;
+    border-radius: 50%;
+}
+
+.actionsIconsCard {
+    border-radius: 50%;
+    border: 1px solid #00316a;
+    /* padding: 1px; */
+    font-size: 13px;
+    margin-right: 1px;
+    color: #00316a;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    padding: 2px 3px;
+}
+
+.inside-scroll-asset-226 {
+    overflow-y: auto;
+    height: calc(100vh - 305px);
+}
+
+.inside-scroll-asset-225 {
+    overflow-y: auto;
+    height: calc(100vh - 300px);
+}
+
+.inside-scroll-asset-227 {
+    overflow-y: auto;
+    height: calc(100vh - 257px);
+}
+
+.ag-center-cols-viewport {
+    /* width: 100%; */
+    overflow-x: hidden !important;
+}
+
+.AssetQuoth5 {
+    position: absolute;
+    left: 16%;
+    top: 15px;
+}
+
+.bottom-fix-history-PhaseApprovalNote {
+    position: absolute;
+    bottom: 60px;
+    background-color: white;
+    right: 0px;
+    left: 0px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+    z-index: 1;
+    /* padding-left: 12%; */
+    border: none;
+}
+
+.inside-scroll-asset-226 {
+    overflow-y: auto;
+    height: calc(100vh - 305px);
+}
+
+.highlighted-date {
+    /* background-color: #ff5733; */
+    /* background-color: #FF474C; */
+    border: 2px double red !important;
+    /* padding: 0px !important; */
+}
+
+.current-highlighted-date {
+    /* background-color: #ffff00; */
+    border: 2px double #fe5000 !important;
+}
+
+.ag-theme-alpine .ag-overlay-no-rows-center {
+    display: none !important;
+}
+
+.cardsIcons {
+    vertical-align: middle;
+    margin-right: 5px !important;
+    font-size: 15px !important;
+    color: #999999 !important;
+}
+
+.padTop7 {
+    padding-top: 3px !important;
+}
+.padTop17 {
+    padding-top: 11px !important;
+}
+.assetTabslist .MuiTab-root {
+    overflow: visible;
+}
+.assetTabslist .MuiBadge-badge {
+    padding: 0 20px;
+    top: 8px;
+    right: auto;
+    z-index: 9999;
+    position: relative;
+    left: -15px;
+}
+.branchMasterHistory.MuiTab-root {
+    overflow: visible;
+}
+.branchMasterHistory.MuiBadge-badge {
+    padding: 0 20px;
+    top: 8px;
+    right: auto;
+    z-index: 9999;
+    position: relative;
+    left: -15px;
+}
+
+.noData {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}

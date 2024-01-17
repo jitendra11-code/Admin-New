@@ -1,0 +1,10 @@
+.rolem-grid .MuiFormControl-root{
+    width: auto!important;
+    margin-right: 10px;
+  }
+
+  .err {
+    font-size: 8px;
+    color: red;
+    /* margin-top: 0.25rem; */
+  }

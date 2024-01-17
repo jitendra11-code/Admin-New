@@ -1,0 +1,8 @@
+
+.MuiFormControl-root {
+    width: 100% !important;
+    margin: 0px;
+}
+.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: #00316a !important;
+  }

@@ -1,0 +1,91 @@
+.heading {
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+.card-panal{
+  background-color: rgb(255, 255, 255);
+    padding: 0px;
+    /* border: 1px solid rgba(0, 0, 0, 0.12); */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.card-panal-boq{
+  background-color: rgb(255, 255, 255);
+    padding: 0px;
+    /* border: 1px solid rgba(0, 0, 0, 0.12); */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input-form {
+  margin-top: 15px;
+  width: 100%;
+}
+/* input {
+  width: 100%;
+  height: 37px;
+} */
+em{
+  color: black;
+  opacity: 0.5;
+}
+
+.phaseLable {
+  font-weight: normal;
+  margin-bottom: 3px;
+  font-size: 13px !important;
+}
+
+.phase-outer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-85 {
+  width: 100%;
+}
+.reset{
+  padding: "2px 20px";
+  border-radius: 6;
+  color: "#00316a";
+  border-color: "#00316a";
+}
+.submit{
+  margin-left: 10;
+  padding: "2px 20px";
+  border-radius: 6;
+  color: "#fff";
+  border-color: "#00316a";
+  background-color:"#00316a";
+}
+.phase-grid .MuiFormControl-root{
+  width: auto!important;
+  margin-right: 10px;
+}
+
+.actionsIcons {
+  border-radius: 50%;
+  border: 1px solid #00316a;
+  padding: 1px;
+  font-size: 13px;
+  margin-right: 8px;
+  color: #00316a;
+  cursor: pointer;
+}
+
+.actionsIconsReport {
+  border-radius: 50%;
+  border: 1px solid #00316a;
+  padding: 1px;
+  /* font-size: 13px; */
+  margin-right: 8px;
+  color: #00316a;
+  cursor: pointer;
+}
+
+
+.actionsIconsSize {
+  width: 21px;
+  height: 21px;
+}

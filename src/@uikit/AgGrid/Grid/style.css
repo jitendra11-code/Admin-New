@@ -1,0 +1,93 @@
+.ag-theme-alpine {
+    --ag-border-radius: 5px;
+    --ag-borders-row: solid 1px;
+    --ag-row-border-color: rgba(0, 0, 0, 0.12);
+    --ag-header-background-color: white;
+    --ag-header-foreground-color: black;
+    --ag-header-column-separator-display: block;
+    --ag-header-column-separator-height: 30%;
+    --ag-header-column-separator-width: 1px;
+    --ag-header-column-separator-color: rgba(0, 0, 0, 0.12);
+    --ag-font-family: sans-serif;
+    --ag-icon-size: 16px;
+}
+/* .ag-body-horizontal-scroll {
+    min-height: 0;
+    min-width: 0;
+    width: 100%;
+    position: relative;
+    display: none !important;
+} */
+.ag-root-wrapper {
+    border-radius: 7px;
+}
+
+[class^='ag-']:not(.ag-icon) {
+    box-sizing: border-box;
+    outline: none;
+    font-family: Poppins, sans-serif;
+}
+.ag-cell {
+    border-right-color: black;
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+/* //furnishing Tablke Css  */
+.grid_border {
+    border-right: 1px solid #0000001f !important;
+}
+
+/* .ag-checkbox-input-wrapper input, .ag-checkbox-input-wrapper input {
+  -webkit-appearance: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+.ag-checkbox-input-wrapper {
+    font-family: var(--ag-icon-font-family) !important;
+    font-size: var(--ag-icon-size);
+    line-height: var(--ag-icon-size) !important;
+    font-style: normal;
+    font-weight: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: var(--ag-icon-size);
+    height: var(--ag-icon-size);
+    background-color: var(--ag-checkbox-background-color);
+    border-radius: var(--ag-checkbox-border-radius);
+    display: inline-block;
+    vertical-align: middle;
+    flex: none;
+}
+
+.css-16i64yn-MuiInputBase-root-MuiOutlinedInput-root {
+    display: -webkit-inline-box !important;
+}
+
+.css-18nc3u2 .MuiOutlinedInput-root.MuiInputBase-sizeSmall {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    display: -webkit-inline-box;
+}
+.hide-horizontal-scroll .ag-root-wrapper {
+    overflow-x: hidden !important;
+}
+
+.ck.ck-toolbar.ck-toolbar_grouping {
+    border-top-right-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+}
+
+.ck-blurred.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline {
+    height: 382px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+

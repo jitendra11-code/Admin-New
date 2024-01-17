@@ -1,0 +1,56 @@
+.slick-dots li button:before {
+  font-size: 15px;
+  opacity: 0.75;
+  color: #fff;
+}
+.slick-dots {
+  bottom: 10px;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #00316a;
+}
+.slick-slide img {
+  height: 390px;
+  width: 100%;
+}
+.BoxOuter {
+  border: 1px solid lightgray;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  cursor: pointer;
+}
+.BoxOuter.active {
+  cursor: pointer;
+  border-color: #00316a;
+}
+.BoxOuter.asset-active {
+  cursor: pointer;
+  border-color: #00316a;
+  background-color: #e9ebf8;
+}
+@media (min-width: 900px) {
+  .css-1uv8bk3 {
+    padding: 0px 20px;
+  } 
+}
+
+.MuiAutocomplete-tagSizeMedium{
+  font-size: 11px !important;
+  height: 26px;
+}
+
+.css-l3ln04-MuiAutocomplete-root .MuiAutocomplete-tag{
+  margin: 0px 3px !important;
+}
+
+.textAreaVertical {
+  resize: vertical;
+  border-radius: 10px;
+  font-family: 'Poppins', serif !important;
+  font-size: 14px !important;
+}
