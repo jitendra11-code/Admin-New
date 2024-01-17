@@ -7,7 +7,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { AppState } from 'redux/store';
 import { secondaryButton } from 'shared/constants/CustomColor';
 import DownloadIcon from '@mui/icons-material/Download';
-import { downloadTemplate, downloadFile, fileValidation, downloadAssetFile } from 'pages/Mandate/DocumentUploadMandate/Components/Utility/FileUploadUtilty';
+import { downloadTemplate, downloadFile, fileValidation } from 'pages/Mandate/DocumentUploadMandate/Components/Utility/FileUploadUtilty';
 import moment from 'moment';
 import { fetchError, showMessage, showWarning } from 'redux/actions';
 import axios from 'axios';
@@ -74,7 +74,7 @@ const BranchBulkUpload = () => {
                 dispatch(fetchError('Error Occurred !'));
             });
     };
-    console.log("docType",docType,documentTypeList)
+    console.log('docType', docType, documentTypeList);
     const getUploadNumber = (e, files) => {
         axios
             .get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterRecordId`)
@@ -401,7 +401,7 @@ const BranchBulkUpload = () => {
                                 style={{ fontSize: '15px' }}
                                 onClick={() => {
                                     console.log('obj?.data', obj?.data);
-                                    downloadFile(obj?.data, { id: 0 }, dispatch)
+                                    downloadFile(obj?.data, { id: 0 }, dispatch);
                                 }}
                                 className="actionsIcons"
                             />

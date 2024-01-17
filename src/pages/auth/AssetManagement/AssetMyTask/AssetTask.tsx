@@ -44,7 +44,7 @@ const AssetMyTask = () => {
   function onGridReady(params) {
     gridRef.current!.api.sizeColumnsToFit();
   }
-
+console.log("object");
   const onFilterTextChange = (e) => {
     gridApi?.setQuickFilter(e.target.value);
   };

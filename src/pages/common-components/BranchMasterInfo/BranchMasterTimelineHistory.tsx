@@ -12,7 +12,7 @@ import './style.css';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import BranchMasterTimeline from './BranchMasterTimeline';
 import SummaryDetailsPopOP from '../SummaryPopUp';
-const BranchMasterStatusHistory = ({ mandateCode, accept_Reject_Remark = '', accept_Reject_Status = '' }) => {
+const BranchMasterStatusHistory = ({ id, accept_Reject_Remark = '', accept_Reject_Status = '' }) => {
     const text = accept_Reject_Remark;
     const [isReadMore, setIsReadMore] = useState(true);
     const [openDrawer, setOpenDrawer] = useState(false);
@@ -60,7 +60,7 @@ const BranchMasterStatusHistory = ({ mandateCode, accept_Reject_Remark = '', acc
                     setOpenDrawer(!openDrawer);
                 }}
             >
-                <BranchMasterTimeline mandateCode={mandateCode} />
+                <BranchMasterTimeline id={id} />
             </SwipeableDrawer>
         </>
     );

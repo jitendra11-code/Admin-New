@@ -46,6 +46,7 @@ const Timeline = ({ mandateCode }) => {
         axios
             .get(`${process.env.REACT_APP_BASEURL}/api/Workflow/GetTimeLines?mandateId=${mandateCode}`)
             .then((response) => {
+                console.log('999', response?.data);
                 setTimelineData(response?.data);
             })
             .catch((err) => {});

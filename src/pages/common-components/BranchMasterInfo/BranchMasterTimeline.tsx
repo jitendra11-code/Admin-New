@@ -30,7 +30,7 @@ const filterOptions: any = [
     },
 ];
 
-const Timeline = ({ mandateCode }) => {
+const Timeline = ({ id }) => {
     const [timelineData, setTimelineData] = useState([]);
     const [showPanel, togglePanel] = useState(true);
     const [value, setValue] = useState(filterOptions?.[0]);
@@ -42,12 +42,12 @@ const Timeline = ({ mandateCode }) => {
     const [filteredGridData, setFilteredGridData] = useState([]);
     const dispatch = useDispatch();
 
-    const getData = (mandateCode) => {
+    const getData = (id) => {
         axios
-            .get(`${process.env.REACT_APP_BASEURL}/api/BranchMasterWorkflow/GetBranchMasterTasksbyRole?roleName=bussiness&userName=userba`)
+            .get(`${process.env.REACT_APP_BASEURL}/api/BranchMasterWorkflow/GetBranchMasterWorkflowRuntimeHistory?branchId=${id}`)
             .then((response) => {
                 console.log('888', response);
-                // setTimelineData(response?.data);
+                setTimelineData(response?.data?.data);
             })
             .catch((err) => {});
     };
@@ -100,10 +100,10 @@ const Timeline = ({ mandateCode }) => {
     };
 
     useEffect(() => {
-        if (mandateCode && mandateCode !== '') {
-            getData(mandateCode);
+        if (id && id !== undefined) {
+            getData(id);
         }
-    }, [mandateCode]);
+    }, [id]);
 
     useEffect(() => {
         // Initialize filteredGridData with a copy of timelineData
@@ -366,7 +366,7 @@ const Timeline = ({ mandateCode }) => {
                                             },
                                         }}
                                         onClick={() => {
-                                            handleExportData(mandateCode);
+                                            handleExportData(id);
                                         }}
                                         size="large"
                                     >

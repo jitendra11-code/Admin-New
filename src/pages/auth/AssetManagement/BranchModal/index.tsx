@@ -77,7 +77,7 @@ function BranchModal({ open, handleClose, dialogTitle, styling, handleSpocSubmit
                     borderRadius: '20px',
                     position: 'absolute',
                     left: '67%',
-                    top: 'calc(30% - 50px)', // Adjust top as needed
+                    // top: 'calc(30% - 20px)', // Adjust top as needed
                 },
             }}
         >

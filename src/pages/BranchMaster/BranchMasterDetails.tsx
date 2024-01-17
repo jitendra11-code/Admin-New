@@ -13,7 +13,7 @@ import axios from 'axios';
 import { fetchError, showMessage } from 'redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateMandateInitialValues, updateMandateSchema } from '@uikit/schemas';
-import regExpressionTextField, { textFieldValidationOnPaste, regExpressionRemark, regExpressionTextFieldLat } from '@uikit/common/RegExpValidation/regForTextField';
+import regExpressionTextField, { textFieldValidationOnPaste, regExpressionRemark } from '@uikit/common/RegExpValidation/regForTextField';
 import moment from 'moment';
 import { useLocation, useParams } from 'react-router-dom';
 import { DesktopDatePicker, LocalizationProvider } from '@mui/x-date-pickers';
@@ -102,7 +102,7 @@ const BranchMaster = () => {
     const [locationCode, setLocationCode] = useState('');
     const [spocDetails, setSpocDetails] = useState([]);
     // const action = branchMasterAction?.action || '';
-    const { branchMasterActionList } = useSelector<AppState, AppState['branchMasterAction']>(({ branchMasterAction }) => branchMasterAction);
+    // const { branchMasterActionList } = useSelector<AppState, AppState['branchMasterAction']>(({ branchMasterAction }) => branchMasterAction);
     const location = useLocation();
     const apiType = location?.state?.apiType || '';
     const action = location?.state?.action || '';
@@ -212,13 +212,9 @@ const BranchMaster = () => {
     };
 
     const GetBranchMasterView = async (phaseId, mandateId) => {
+        console.log('111HHH', phaseId, mandateId);
         await axios
-            .get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterView`, {
-                params: {
-                    phaseId: phaseId,
-                    mandateId: mandateId,
-                },
-            })
+            .get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterView?phaseId=${phaseId}&mandateId=${mandateId}`)
             .then((response: any) => {
                 if (response && response?.data && response?.data?.length > 0) {
                     setDropDownDataList(response?.data);
@@ -261,13 +257,9 @@ const BranchMaster = () => {
     }, []);
 
     const getBrachMasterWithPhaseId = async (phaseId) => {
+        console.log('222HHH', phaseId, mandateId);
         await axios
-            .get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterView`, {
-                params: {
-                    phaseId: phaseId,
-                    mandateId: 0,
-                },
-            })
+            .get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterView?phaseId=${phaseId}&mandateId=0`)
             .then((response: any) => {
                 if (response && response?.data && response?.data?.length > 0) {
                     const filteredMandateList = response.data.filter((item) => item?.phasecode === values?.phaseCode);
@@ -283,20 +275,16 @@ const BranchMaster = () => {
     };
     // 2nd changes
     const getBrachMasterWithPhaseIdAndMandateId = async (phaseId, mandateId) => {
+        console.log('333HHH', phaseId, mandateId);
         await axios
-            .get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterView`, {
-                params: {
-                    phaseId: phaseId,
-                    mandateId: mandateId,
-                },
-            })
+            .get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterView?phaseId=${phaseId}&mandateId=${mandateId}`)
             .then((response: any) => {
                 if (response && response?.data && response?.data?.length > 0) {
                     setDropDownDataList(response?.data);
                     const resDataFromMandate = response?.data[0];
                     // setFieldValue('locationCode', resDataFromMandate?.locationCode);
                     setFieldValue('adminVertical', resDataFromMandate?.adminVertical);
-                    setFieldValue('buildingConstructedInYear', resDataFromMandate?.buildingConstructedInYear);
+                    setFieldValue('buildingConstructedInYear', Object.keys(resDataFromMandate?.buildingConstructedInYear).length == 0 ? '' : resDataFromMandate?.buildingConstructedInYear);
                     setFieldValue('branch_Code', resDataFromMandate?.branch_Code);
                     setFieldValue('constructedArea', resDataFromMandate?.constructedArea);
                     setFieldValue('branchType', resDataFromMandate?.branchType);
@@ -320,13 +308,13 @@ const BranchMaster = () => {
             .catch((e: any) => {});
     };
 
-    React.useEffect(() => {
-        var branchAction = null;
-        if (branchMasterActionList?.length > 0) {
-            branchAction = branchMasterActionList && branchMasterActionList?.find((item) => item?.mandateId === parseInt(id) && item?.module === module);
-            setBranchMasterAction(branchAction);
-        }
-    }, [id, branchMasterActionList]);
+    // React.useEffect(() => {
+    //     var branchAction = null;
+    //     if (branchMasterActionList?.length > 0) {
+    //         branchAction = branchMasterActionList && branchMasterActionList?.find((item) => item?.mandateId === parseInt(id) && item?.module === module);
+    //         setBranchMasterAction(branchAction);
+    //     }
+    // }, [id, branchMasterActionList]);
     const handleGetPassDate = (newValue) => {
         if (newValue !== null && dayjs(newValue).isValid()) {
             setDateError('');
@@ -347,7 +335,8 @@ const BranchMaster = () => {
     const handleSpocSubmit = (val) => {
         const temp = spoc[dialogTitle] !== undefined ? { ...val, id: spoc[dialogTitle].id || 0 } : { ...val, id: 0 };
         const setVal = { ...spoc, [dialogTitle]: temp };
-        console.log('666', spoc, dialogTitle, val, setVal);
+        const newArray = spocEmptyTitle.filter((item) => item !== dialogTitle);
+        setSpocEmptyTitle(newArray);
         setSPOCdata({ ...SPOCdata, [dialogTitle]: temp });
         setSpoc(setVal);
         setOpen(false);
@@ -444,6 +433,7 @@ const BranchMaster = () => {
                 dispatch(fetchError('Please add all cards of SPOC Details'));
                 return;
             }
+            console.log('444', values, values?.buildingConstructedInYear);
             const body = {
                 uid: '',
                 id: id === undefined ? 0 : id,
@@ -461,7 +451,7 @@ const BranchMaster = () => {
                 chargeableArea: values?.chargeableArea,
                 carpetArea: values?.carpetArea,
                 constructedArea: values?.constructedArea,
-                buildingConstructedInYear: values?.buildingConstructedInYear,
+                buildingConstructedInYear: values?.buildingConstructedInYear.toString(),
                 sapLocationCode: values?.sapLocationCode,
                 sapNewLocationCode: values?.sapNewLocationCode,
                 branchACType: values?.branchACType,
@@ -627,7 +617,7 @@ const BranchMaster = () => {
             setFieldValue('branch_SPOC', selectedMandate.branch_SPOC);
             setFieldValue('branch_SPOC_Email', selectedMandate.branch_SPOC_Email);
             setFieldValue('branch_SPOC_Phone', selectedMandate.branch_SPOC_Phone);
-            setFieldValue('buildingConstructedInYear', selectedMandate.buildingConstructedInYear);
+            setFieldValue('buildingConstructedInYear', Object.keys(selectedMandate.buildingConstructedInYear).length == 0 ? '' : selectedMandate.buildingConstructedInYear);
             setFieldValue('buildingName', selectedMandate.buildingName);
             setFieldValue('carpetArea', selectedMandate.total_area_sft);
             setFieldValue('chargeableArea', selectedMandate.chargeableArea);
@@ -707,7 +697,25 @@ const BranchMaster = () => {
             setMandateList([]);
         }
     }, [selectedPhaseCode, setFieldValue]);
-    console.log('444', spocEmptyTitle);
+    const isExists = async (code) => {
+        try {
+            const res = await axios.get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterMandateCount?MandateCode=${code}`);
+            console.log('233', code, res.data);
+            return res.data > 0;
+        } catch (err) {
+            console.log('error');
+            return false; // Handle errors appropriately
+        }
+        // await axios
+        //     .get(`${process.env.REACT_APP_BASEURL}/api/BranchMaster/GetBranchMasterMandateCount?MandateCode=PH_1101_MD_003`)
+        //     .then((res) => {
+        //         console.log('233', code, res.data);
+        //         return res.data > 0;
+        //     })
+        //     .catch((err) => console.log('error'));
+        // // return false;
+    };
+    console.log('$$$', errors, values);
     return (
         <>
             <div>
@@ -719,6 +727,7 @@ const BranchMaster = () => {
                         Location SPOC Details
                     </Box>
                 </Box>
+                <BranchModal open={open} handleClose={handleClose} dialogTitle={dialogTitle} styling={styling} handleSpocSubmit={handleSpocSubmit} spoc={spoc} errors={errors} touched={touched} />
                 <form onSubmit={handleSubmit}>
                     <div>
                         <Grid container spacing={2}>
@@ -727,49 +736,55 @@ const BranchMaster = () => {
                                 <div className="card-panal inside-scroll-157" style={{ border: '1px solid rgba(0, 0, 0, 0.12)' }}>
                                     {/* Content for the left side (70%) */}
                                     {/* <Typography variant="h6">Hello from 70%</Typography> */}
-                                    <Grid item xs={6} md={4} justifyContent="space-between" sx={{ position: 'relative', display: 'flex', justifyContent: 'space-between' }}>
-                                        <div style={{ alignItems: 'center' }}>
-                                            <Typography className="required add-prop-bold" style={{ whiteSpace: 'nowrap', marginRight: '10px' }}>
-                                                Location Code
-                                            </Typography>
-                                            <TextField
-                                                id="locationCode"
-                                                disabled={id !== undefined}
-                                                name="locationCode"
-                                                variant="outlined"
-                                                size="small"
-                                                autoComplete="off"
-                                                value={values?.locationCode || ''}
-                                                onBlur={handleBlur}
-                                                onChange={handleChange}
-                                                onPaste={(e: any) => {
-                                                    if (!textFieldValidationOnPaste(e)) {
-                                                        dispatch(fetchError('You can not paste Spacial characters'));
-                                                    }
-                                                }}
-                                                onKeyDown={(e: any) => {
-                                                    if (e.target.selectionStart === 0 && e.code === 'Space') {
-                                                        e.preventDefault();
-                                                    }
-                                                    const isAlphanumeric = /^[a-zA-Z0-9\s]*$/; // Only allows letters, digits, and spaces
-                                                    const isValidInput = isAlphanumeric.test(e.key);
+                                    <Grid container item xs={12} spacing={3} justifyContent="start" alignSelf="center">
+                                        <Grid item xs={6} md={4} justifyContent="space-between" sx={{ position: 'relative', display: 'flex', justifyContent: 'space-between' }}>
+                                            <div style={{ alignItems: 'center' }}>
+                                                <Typography className="required add-prop-bold" style={{ whiteSpace: 'nowrap', marginRight: '10px' }}>
+                                                    Location Code
+                                                </Typography>
+                                                <TextField
+                                                    id="locationCode"
+                                                    disabled={id !== undefined}
+                                                    name="locationCode"
+                                                    variant="outlined"
+                                                    size="small"
+                                                    autoComplete="off"
+                                                    value={values?.locationCode || ''}
+                                                    onBlur={handleBlur}
+                                                    onChange={handleChange}
+                                                    onPaste={(e: any) => {
+                                                        if (!textFieldValidationOnPaste(e)) {
+                                                            dispatch(fetchError('You can not paste Spacial characters'));
+                                                        }
+                                                    }}
+                                                    onKeyDown={(e: any) => {
+                                                        if (e.target.selectionStart === 0 && e.code === 'Space') {
+                                                            e.preventDefault();
+                                                        }
+                                                        const isAlphanumeric = /^[a-zA-Z0-9\s]*$/; // Only allows letters, digits, and spaces
+                                                        const isValidInput = isAlphanumeric.test(e.key);
 
-                                                    if (!isValidInput) {
-                                                        e.preventDefault();
-                                                    }
-                                                }}
-                                            />
+                                                        if (!isValidInput) {
+                                                            e.preventDefault();
+                                                        }
+                                                    }}
+                                                />
 
-                                            {touched.locationCode && errors.locationCode ? <p className="form-error">{errors.locationCode}</p> : null}
-                                        </div>
-                                        <div style={{ alignItems: 'end', marginTop: '4%' }}>
-                                            <BranchMasterTimelineHistory mandateCode={1} accept_Reject_Status={'currentStatus'} accept_Reject_Remark={'currentRemark'} />
-                                            {/* <Tooltip className="actionsIcons" id={`branchMasterHistory`} title="Branch Master Timeline History">
+                                                {touched.locationCode && errors.locationCode ? <p className="form-error">{errors.locationCode}</p> : null}
+                                            </div>
+                                        </Grid>
+                                        <Grid item xs={8} md={4}></Grid>
+                                        <Grid item xs={8} md={4}>
+                                            {id !== undefined && (
+                                                <div style={{ display: 'flex', justifyContent: 'end', alignItems: 'end', marginTop: '4%' }}>
+                                                    <BranchMasterTimelineHistory id={id} accept_Reject_Status={'currentStatus'} accept_Reject_Remark={'currentRemark'} />
+                                                    {/* <Tooltip className="actionsIcons" id={`branchMasterHistory`} title="Branch Master Timeline History">
                                                 <HistoryIcon style={{ fontSize: '20px', color: '#000', cursor: 'pointer' }} className="actionsIcons" />
                                             </Tooltip> */}
-                                        </div>
+                                                </div>
+                                            )}
+                                        </Grid>
                                     </Grid>
-
                                     <div
                                         style={{
                                             border: '1px solid lightgray',
@@ -848,7 +863,16 @@ const BranchMaster = () => {
                                                 name="mandateCode"
                                                 id="mandateCode"
                                                 value={values.mandateCode || ''}
-                                                onChange={handleChange}
+                                                // onChange={handleChange}
+                                                onChange={async (event, newValue) => {
+                                                    console.log('533', event.target.name);
+                                                    if (await isExists(event.target.value)) {
+                                                        setFieldError('mandateCode', 'mandate code already exist');
+                                                        setFieldTouched('mandateCode', true);
+                                                        return;
+                                                    }
+                                                    handleChange(event);
+                                                }}
                                                 onBlur={handleBlur}
                                                 disabled={id !== undefined}
                                                 sx={{
@@ -2040,7 +2064,6 @@ const BranchMaster = () => {
                         </div>
                     )}
                 </form>
-                <BranchModal open={open} handleClose={handleClose} dialogTitle={dialogTitle} styling={styling} handleSpocSubmit={handleSpocSubmit} spoc={spoc} errors={errors} touched={touched} />
             </div>
         </>
     );
