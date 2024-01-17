@@ -192,6 +192,7 @@ const BranchMaster = () => {
         }
     }, [id, apiCalled, phaseId, mandateId, flag]);
 console.log("object");
+console.log("object");
     useEffect(() => {
         if (!apiCalled && id !== 'noid' && id) {
             axios.get(`${process.env.REACT_APP_BASEURL}/api/BranchMasterSPOC/GetBranchMasterSPOCDetails?LocationCode=${locationCode}`).then((response: any) => {
